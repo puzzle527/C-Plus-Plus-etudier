@@ -1,0 +1,12 @@
+﻿  Attendance.cpp
+c:\users\82102\source\repos\puzzle527\c-plus-plus-etudier\출석부\출석부\attendance.cpp(40): warning C4018: '>=': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\82102\source\repos\puzzle527\c-plus-plus-etudier\출석부\출석부\attendance.cpp(66): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\82102\source\repos\puzzle527\c-plus-plus-etudier\출석부\출석부\attendance.cpp(76): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\82102\source\repos\puzzle527\c-plus-plus-etudier\출석부\출석부\attendance.cpp(103): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\82102\source\repos\puzzle527\c-plus-plus-etudier\출석부\출석부\attendance.cpp(114): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\82102\source\repos\puzzle527\c-plus-plus-etudier\출석부\출석부\attendance.cpp(140): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\82102\source\repos\puzzle527\c-plus-plus-etudier\출석부\출석부\attendance.cpp(151): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\82102\source\repos\puzzle527\c-plus-plus-etudier\출석부\출석부\attendance.cpp(186): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  main.cpp
+  Student.cpp
+  출석부.vcxproj -> C:\Users\82102\source\repos\puzzle527\C-Plus-Plus-etudier\출석부\Debug\출석부.exe
