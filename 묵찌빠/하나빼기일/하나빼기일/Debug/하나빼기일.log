@@ -1,7 +1,0 @@
-﻿  SRP.cpp
-c:\users\82102\source\repos\puzzle527\c-plus-plus-etudier\하나빼기일\하나빼기일\srp.cpp(25): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-c:\users\82102\source\repos\puzzle527\c-plus-plus-etudier\하나빼기일\하나빼기일\srp.cpp(42): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-c:\users\82102\source\repos\puzzle527\c-plus-plus-etudier\하나빼기일\하나빼기일\srp.cpp(65): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-c:\users\82102\source\repos\puzzle527\c-plus-plus-etudier\하나빼기일\하나빼기일\srp.cpp(105): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-c:\users\82102\source\repos\puzzle527\c-plus-plus-etudier\하나빼기일\하나빼기일\srp.cpp(126): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-  하나빼기일.vcxproj -> C:\Users\82102\source\repos\puzzle527\C-Plus-Plus-etudier\하나빼기일\Debug\하나빼기일.exe
