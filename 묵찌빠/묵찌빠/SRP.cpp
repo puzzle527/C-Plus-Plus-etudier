@@ -4,27 +4,31 @@
 void SRP::PlayGame()
 {
 	string tempstr;
-	cout << "ÇÃ·¹ÀÌ¾î ÀÌ¸§À» ÀÔ·ÂÇØÁÖ¼¼¿ä." << endl;
+	cout << "í”Œë ˆì´ì–´ ì´ë¦„ì„ ì…ë ¥í•´ì£¼ì„¸ìš”." << endl;
 	cin >> tempstr;
  
 	Player.Setname(tempstr);
-	Com.Setname("ÄÄÇ»ÅÍ");
+	Com.Setname("ì»´í“¨í„°");
 
-	//°¡À§¹ÙÀ§º¸ ½ÃÀÛ
+	//ê°€ìœ„ë°”ìœ„ë³´ ì‹œì‘
 	while (1)
 	{
 		int tempnum;
 		Player.SetisWin(false);
 		Com.SetisWin(false);
 
-		cout << "0.°¡À§ 1.¹ÙÀ§ 2.º¸" << endl;
+		cout << "0.ê°€ìœ„ 1.ë°”ìœ„ 2.ë³´" << endl;
 		cin >> tempnum;
 		Player.Setnumber(tempnum);
 		Com.Setnumber(rand() % 3);
 
 		if (Player.Getnumber() == Com.Getnumber())
 		{
-			cout << "¹«½ÂºÎ" << endl;
+			cout << "ë¬´ìŠ¹ë¶€" << endl;
+			Player.Print();
+			cout << endl;
+			Com.Print();
+			cout << endl;
 			continue;
 		}
 		else if (Player.Getnumber() == 0)
@@ -56,7 +60,7 @@ void SRP::PlayGame()
 
 		while (1)
 		{
-			cout << "1.¹¬ 0.Âî 2.ºü" << endl;
+			cout << "1.ë¬µ 0.ì°Œ 2.ë¹ " << endl;
 			cin >> tempnum;
 
 			Player.Setnumber(tempnum);
@@ -71,7 +75,7 @@ void SRP::PlayGame()
 			{
 				if (Player.Getnumber() == Com.Getnumber())
 				{
-					cout << "ÇÃ·¹ÀÌ¾î ½Â¸®" << endl;
+					cout << "í”Œë ˆì´ì–´ ìŠ¹ë¦¬" << endl;
 					return;
 				}
 				else if (Player.Getnumber() == 0)
@@ -104,7 +108,7 @@ void SRP::PlayGame()
 			{
 				if (Com.Getnumber() == Player.Getnumber())
 				{
-					cout << "ÄÄÇ»ÅÍ ½Â¸®" << endl;
+					cout << "ì»´í“¨í„° ìŠ¹ë¦¬" << endl;
 					return;
 				}
 				else if (Com.Getnumber() == 0)
