@@ -100,6 +100,12 @@ void Store::StorePlay()
 		else if (Input == 3)
 		{
 			cout << "상점을 나갑니다." << endl;
+			StoreWeapon.clear();
+			StoreWeapon.shrink_to_fit();
+			StoreArmor.clear();
+			StoreArmor.shrink_to_fit();
+			StorePortion.clear();
+			StorePortion.shrink_to_fit();
 			break;
 		}
 	}
