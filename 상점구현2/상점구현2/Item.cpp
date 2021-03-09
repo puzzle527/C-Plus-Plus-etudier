@@ -11,6 +11,13 @@ Item::Item(string na, int pr)
 	price = pr;
 }
 
+Item::Item(const Item & Copy)
+{
+	name = Copy.name;
+	mount = Copy.mount;
+	price = Copy.price;
+}
+
 void Item::Print()
 {
 	cout << "ÀÌ¸§:" << name << "\t"
@@ -22,6 +29,12 @@ Weapon::Weapon(string na, int pr, int at)
 	name = na;
 	price = pr;
 	att = at;
+}
+
+Weapon::Weapon(Weapon & Copy)
+{
+	Item(Item);
+	att = Copy.att;
 }
 
 void Weapon::Print()
@@ -36,6 +49,12 @@ Armor::Armor(string na, int pr, int de)
 	name = na;
 	price = pr;
 	def = de;
+}
+
+Armor::Armor(Armor & Copy)
+{
+	Item(Item);
+	def = Copy.def;
 }
 
 void Armor::Print()

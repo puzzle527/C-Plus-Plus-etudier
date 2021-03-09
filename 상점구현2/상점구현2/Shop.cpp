@@ -1,6 +1,15 @@
 #include "stdafx.h"
 #include "Shop.h"
 
+Shop::~Shop()
+{
+	for (int i = 0; i < 6; i++)
+	{
+		delete ShopList[i];
+	}
+	cout << "샵리스트 할당 해제" << endl;
+}
+
 void Shop::InitShop()
 {
 	ShopList[0] = new Item("잡템1", 100);
@@ -19,7 +28,9 @@ void Shop::Play()
 	InitShop();
 	while (1)
 	{
-		cout << "1.구입 2.판매" << endl;
+		system("cls");
+		pInven->PrintInven();
+		cout << "1.구입 2.판매 3.나가기" << endl;
 		cin >> Input;
 		switch (Input)
 		{
@@ -29,20 +40,45 @@ void Shop::Play()
 		case 2:
 			SellItem();
 			break;
+		case 3:
+			return;
 		}
 	}
 }
 
 void Shop::BuyItem()
 {
+	system("cls");
 	for (int i = 0; i < 6; i++)
 	{
+		cout << i << ".";//인덱스 출력
 		ShopList[i]->Print();
 	}
-	cout << "아이템 구매" << endl;
+	cout << "구매할 아이템 번호 입력" << endl;
+	cin >> Input;
+	pInven->AddItem(new Item(*(ShopList[Input])));
+	/*for (int i= 0; i < pInven->GetInven().size(); i++)
+	{
+		if ((pInven->GetInven().size() != 1) && 
+			((pInven->GetInven()[i])->Getname()) == ShopList[Input]->Getname())
+		{
+			pInven->GetInven()[i]->Setmount(pInven->GetInven()[i]->Getmount() + 1);
+			pInven->DeleteItem(pInven->GetInven().size() - 1);
+			break;
+		}
+	}*/
+	pInven->Setgold(pInven->Getgold() - pInven->GetInven()[pInven->GetInven().size() - 1]->Getprice());
+	cout << "구매완료" << endl;
+	Sleep(1000);
 }
 
 void Shop::SellItem()
 {
-	cout << "아이템 판매" << endl;
+	system("cls");
+	pInven->PrintInven();
+	cout << "판매할 아이템 번호 입력" << endl;
+	cin >> Input;
+	pInven->DeleteItem(Input);
+	cout << "판매완료" << endl;
+	Sleep(1000);
 }

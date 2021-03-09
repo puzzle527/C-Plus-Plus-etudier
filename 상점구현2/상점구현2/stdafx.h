@@ -16,4 +16,5 @@
 using namespace std;
 
 #include "Item.h"
+#include "Inventory.h"
 #include "Shop.h"
