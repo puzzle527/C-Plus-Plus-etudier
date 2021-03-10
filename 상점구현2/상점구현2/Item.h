@@ -20,6 +20,7 @@ public:
 	MAKEGETSET(string, name);
 	MAKEGETSET(int, price);
 	MAKEGETSET(int, mount);
+	virtual Item* Clone() { return new Item(*this); }
 };
 
 class Weapon :public Item
@@ -28,12 +29,13 @@ private:
 	int att;
 public:
 	Weapon(string na, int pr, int at);
-	Weapon(Weapon &Copy);
+	Weapon(const Weapon &Copy);
 	~Weapon()
 	{
 		cout << "웨폰 삭제" << endl;
 	}
 	void Print() override;
+	virtual Item* Clone() { return new Weapon(*this); }
 };
 
 class Armor :public Item
@@ -42,11 +44,12 @@ private:
 	int def;
 public:
 	Armor(string na, int pr, int de);
-	Armor(Armor &Copy);
+	Armor(const Armor &Copy);
 	~Armor()
 	{
 		cout << "아머 삭제" << endl;
 	}
 	void Print() override;
+	virtual Item* Clone() { return new Armor(*this); }
 };
 

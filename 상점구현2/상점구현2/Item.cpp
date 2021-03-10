@@ -31,9 +31,11 @@ Weapon::Weapon(string na, int pr, int at)
 	att = at;
 }
 
-Weapon::Weapon(Weapon & Copy)
+Weapon::Weapon(const Weapon & Copy)
 {
-	Item(Item);
+	name = Copy.name;
+	mount = Copy.mount;
+	price = Copy.price;
 	att = Copy.att;
 }
 
@@ -51,9 +53,11 @@ Armor::Armor(string na, int pr, int de)
 	def = de;
 }
 
-Armor::Armor(Armor & Copy)
+Armor::Armor(const Armor & Copy)
 {
-	Item(Item);
+	name = Copy.name;
+	mount = Copy.mount;
+	price = Copy.price;
 	def = Copy.def;
 }
 

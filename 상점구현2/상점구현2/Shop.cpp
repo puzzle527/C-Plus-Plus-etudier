@@ -56,18 +56,18 @@ void Shop::BuyItem()
 	}
 	cout << "구매할 아이템 번호 입력" << endl;
 	cin >> Input;
-	pInven->AddItem(new Item(*(ShopList[Input])));
-	/*for (int i= 0; i < pInven->GetInven().size(); i++)
+	pInven->AddItem(ShopList[Input]->Clone());
+	pInven->Setgold(pInven->Getgold() - pInven->GetInven()[pInven->GetInven().size() - 1]->Getprice());
+	for (int i = 0; i < pInven->GetInven().size() - 1; i++)
 	{
-		if ((pInven->GetInven().size() != 1) && 
-			((pInven->GetInven()[i])->Getname()) == ShopList[Input]->Getname())
+		if ((pInven->GetInven().size() != 1) &&
+			((pInven->GetInven()[pInven->GetInven().size() - 1])->Getname()) == pInven->GetInven()[i]->Getname())
 		{
 			pInven->GetInven()[i]->Setmount(pInven->GetInven()[i]->Getmount() + 1);
-			pInven->DeleteItem(pInven->GetInven().size() - 1);
+			pInven->DeleteItem((pInven->GetInven().size()) - 1);
 			break;
 		}
-	}*/
-	pInven->Setgold(pInven->Getgold() - pInven->GetInven()[pInven->GetInven().size() - 1]->Getprice());
+	}
 	cout << "구매완료" << endl;
 	Sleep(1000);
 }
@@ -78,7 +78,10 @@ void Shop::SellItem()
 	pInven->PrintInven();
 	cout << "판매할 아이템 번호 입력" << endl;
 	cin >> Input;
-	pInven->DeleteItem(Input);
+	pInven->GetInven()[Input]->Setmount(pInven->GetInven()[Input]->Getmount() - 1);
+	pInven->Setgold(pInven->GetInven()[Input]->Getprice() + pInven->Getgold());
+	if(pInven->GetInven()[Input]->Getmount() == 0)
+		pInven->DeleteItem(Input);
 	cout << "판매완료" << endl;
 	Sleep(1000);
 }
