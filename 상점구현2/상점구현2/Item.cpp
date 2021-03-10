@@ -22,6 +22,7 @@ void Item::Print()
 {
 	cout << "이름:" << name << "\t"
 		<< "가격:" << price << endl;
+	//cout << "수량 : " << mount << endl;
 }
 
 Weapon::Weapon(string na, int pr, int at)
