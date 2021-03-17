@@ -48,7 +48,7 @@ int main(void)
 	string D = "abcefabcghabcij";
 	int cnt = 0;
 	//abcefabchij
-	cout << D << endl;
+	//cout << D << endl;
 	for (int i = 0; i < D.size() - 2; i++)
 	{
 		if (D[i] == 'a' && D[i + 1] == 'b' && D[i + 2] == 'c')
