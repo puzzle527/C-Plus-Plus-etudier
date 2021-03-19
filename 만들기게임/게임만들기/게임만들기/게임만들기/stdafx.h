@@ -1,6 +1,7 @@
 #pragma once
 
 #include <iostream>
+#include <fstream>
 #include <time.h>
 #include <Windows.h>
 #include <string>

@@ -33,6 +33,7 @@ public:
 	MAKEGETSET(int, ChMP)
 	MAKEGETSET(int, MAXHP)
 	MAKEGETSET(int, MAXMP)
+	MAKEGETSET(int, Level)
 };
 
 class Ataho : public Character
