@@ -35,6 +35,14 @@ int main(void)
 			C.push_back(static_cast<char>(97 + i));
 		}
 	}
+	/*for (int i = 0; i < 26; i++)
+	{
+		if (arr[i] != 0)
+		{
+			C += to_string(arr[i]);
+			C += static_cast<char>(97 + i);
+		}
+	}*/
 	cout << C << endl;
 	/*for (int i = 0; i < 26; i++)
 	{
